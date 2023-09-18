@@ -1,0 +1,13 @@
+{
+    "User":[
+        {
+            "usuario": "standard_user",
+            "senha": "secret_sauce"
+        },
+
+        {
+            "usuario": "yuri_queiroz",
+            "senha": "secret_sauce"
+        }
+    ]
+}
