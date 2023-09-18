@@ -14,7 +14,14 @@ describe('login', () => {
     it('CT 002 - Realizar Login com nome de usuário não cadastrado', () => {
         
         cy.fixture('login.json').then(dados => {
-            cy.logarInvalido(dados.User[1].usuario, dados.User[1].senha)
+            cy.logarNomeInvalido(dados.User[1].usuario, dados.User[1].senha)
+        })
+    })
+
+    it('CT 003 - Realizar Login com senha vazia', () => {
+        
+        cy.fixture('login.json').then(dados => {
+            cy.logarSenhaInvalida(dados.User[2].usuario, dados.User[2].senha)
         })
     })
 })

@@ -8,6 +8,11 @@
         {
             "usuario": "yuri_queiroz",
             "senha": "secret_sauce"
+        },
+
+        {
+            "usuario": "standard_user",
+            "senha": " "
         }
     ]
 }

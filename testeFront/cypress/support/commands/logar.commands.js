@@ -11,7 +11,16 @@ Cypress.Commands.add('logar', (nome, senha) => {
     cy.contains('Swag Labs').should('be.visible')
 })
 
-Cypress.Commands.add('logarInvalido', (nome, senha) => {
+Cypress.Commands.add('logarNomeInvalido', (nome, senha) => {
+
+    cy.get(inputNome).type(nome)
+    cy.get(inputSenha).type(senha)
+    cy.get(btnLogin).click()
+    cy.url().should('eq', 'https://www.saucedemo.com/')
+    cy.contains('Epic sadface: Username and password do not match any user in this service').should('be.visible')
+})
+
+Cypress.Commands.add('logarSenhaInvalida', (nome, senha) => {
 
     cy.get(inputNome).type(nome)
     cy.get(inputSenha).type(senha)
